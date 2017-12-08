@@ -1,0 +1,45 @@
+[hdfs@hosttwo ~]$ spark-submit --master yarn --deploy-mode client --executor-cores 3 --executor-memory 3G --num-executors 55 datatest.R                      SPARK_MAJOR_VERSION is set to 2, using Spark2
+[1] "2017-12-08 14:06:26 CST"
+Loading required package: methods
+
+Attaching package: ‘SparkR’
+
+The following objects are masked from ‘package:stats’:
+
+    cov, filter, lag, na.omit, predict, sd, var, window
+
+The following objects are masked from ‘package:base’:
+
+    as.data.frame, colnames, colnames<-, drop, endsWith, intersect,
+    rank, rbind, sample, startsWith, subset, summary, transform, union
+
+Spark package found in SPARK_HOME: /usr/hdp/current/spark2-client
+Java ref type org.apache.spark.sql.SparkSession id 1
+[1] "load data done"
+[1] "2017-12-08 14:09:29 CST"
+[1] "preprocess data done"
+[1] "2017-12-08 14:09:30 CST"
+
+Deviance Residuals:
+(Note: These are approximate quantiles with relative error <= 0.01)
+    Min       1Q   Median       3Q      Max
+-0.5831  -0.1880  -0.1675  -0.1447   3.7120
+
+Coefficients:
+                Estimate
+(Intercept)  -8.18113442
+Intercept     0.00000000
+LAST_RT       0.39235360
+CSCORE_B      0.00241417
+OLTV         -0.00096044
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 166267098  on 1066491974  degrees of freedom
+Residual deviance: 163676959  on 1066491970  degrees of freedom
+AIC: 163676969
+
+Number of Fisher Scoring iterations: 8
+
+[1] "glm calculate done"
+[1] "2017-12-08 14:56:03 CST"

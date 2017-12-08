@@ -1,0 +1,25 @@
+[hdfs@hosttwo ~]$ spark-submit --master yarn --deploy-mode client --executor-cores 3 --executor-memory 3G --num-executors 55 datatest.R
+SPARK_MAJOR_VERSION is set to 2, using Spark2
+[1] "2017-12-08 15:16:45 CST"
+Loading required package: methods
+
+Attaching package: ‘SparkR’
+
+The following objects are masked from ‘package:stats’:
+
+    cov, filter, lag, na.omit, predict, sd, var, window
+
+The following objects are masked from ‘package:base’:
+
+    as.data.frame, colnames, colnames<-, drop, endsWith, intersect,
+    rank, rbind, sample, startsWith, subset, summary, transform, union
+
+Spark package found in SPARK_HOME: /usr/hdp/current/spark2-client
+Java ref type org.apache.spark.sql.SparkSession id 1
+[1] "load data done"
+[1] "2017-12-08 15:20:25 CST"
+[1] "preprocess data done"
+[1] "2017-12-08 15:20:26 CST"
+[1] 0
+[1] "cov calculate done"
+[1] "2017-12-08 15:24:34 CST"
